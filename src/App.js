@@ -8,6 +8,7 @@ class App extends Component {
       <div className="App">
 
       CHECKING IF THIS WORKS
+      DDJDDJDJDJ 
      
       </div>
     );
