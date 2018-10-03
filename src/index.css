@@ -2,4 +2,51 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+
+}
+
+
+.another-class {
+display: flex;
+/* float: right; */
+margin: 20px;
+background-color: turquoise;
+width: 100%;
+/* height: 110px; */
+margin: 0px;
+padding: 0px;
+padding-left: 800px;
+padding-top: 50px;
+}
+
+
+
+.move-it-all {
+  /* padding-left: 900px; */
+}
+
+.whatever {
+  text-decoration: none;
+  color: gray;
+  list-style-type: none;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+
+.for-signup {
+  background-color: gray;
+  /* padding-top: 100px; */
+  width: 600px;
+  float: right;
+  height: 710px;
+}
+
+
+#for-h1 {
+     padding-left: 150px;
 }
