@@ -6,8 +6,6 @@ import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import AuthService from './components/auth/auth-service';
-import AddProject from './components/AddProject';
-
 
 
 import { Switch, Route } from 'react-router-dom';
