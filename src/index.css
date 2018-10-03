@@ -12,8 +12,6 @@ display: flex;
 /* float: right; */
 margin: 20px;
 background-color: turquoise;
-width: 100%;
-/* height: 110px; */
 margin: 0px;
 padding: 0px;
 padding-left: 800px;
@@ -34,7 +32,7 @@ li {
 
 
 .for-signup {
-  background-color: lightblue;
+  background-color: rgba(64 , 224, 208, 0.09);
   /* padding-top: 100px; */
   width: 600px;
   float: right;

@@ -50,8 +50,8 @@ class App extends Component {
         <Navbar  setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
         <Switch>
         <Route className="for-both" exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
-          <Route exact path="/projects" component={ProjectList}/>
-          <Route exact path="/projects/:id" component={ProjectDetails} />
+          <Route exact path="/fields" component={ProjectList}/>
+          <Route exact path="/fields/:id" component={ProjectDetails} />
         </Switch>
  </div>
 
