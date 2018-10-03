@@ -50,7 +50,6 @@ class App extends Component {
         <Navbar  setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
         <Switch>
         <Route className="for-both" exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
-        <Route className="for-both" exact path='/signup' render={() => <Signup setTheUserInTheAppComponent={this.logMeIn}/>}/>
           <Route exact path="/projects" component={ProjectList}/>
           <Route exact path="/projects/:id" component={ProjectDetails} />
         </Switch>
@@ -60,6 +59,7 @@ class App extends Component {
  <div className="for-signup">
 <h1 id="for-h1">Create a new account</h1>
 <h2 id="for-h1">It's free</h2>
+        <Route className="for-both" exact path='/signup' render={() => <Signup setTheUserInTheAppComponent={this.logMeIn}/>}/>
  </div>
       </div>
     );

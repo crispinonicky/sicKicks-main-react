@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 class Signup extends Component {
   constructor(props){
     super(props);
-    this.state = { username: '', password: '' };
+    this.state = { username: '', password: '', firstName: '', lastName: '', playerPosition: "", favoriteClub: "", email: "", };
     this.service = new AuthService();
   }
 
@@ -13,12 +13,22 @@ class Signup extends Component {
     event.preventDefault();
     const username = this.state.username;
     const password = this.state.password;
+    const firstName = this.state.firstName;
+    const lastName = this.state.lastName;
+    const playerPosition = this.state.playerPosition;
+    const favoriteClub = this.state.favoriteClub;
+    const email = this.state.email;
   
     this.service.signup(username, password)
     .then( theUserObject => {
         this.setState({
             username: "", 
             password: "",
+            firstName: "",
+            lastName: "",
+            playerPosition: "",
+            favoriteClub: "",
+            email: "",
         });
         this.props.setTheUserInTheAppComponent(theUserObject)
     })
@@ -34,14 +44,37 @@ class Signup extends Component {
   render(){
     return(
       <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Username:</label>
-          <input type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
-          
-          <label>Password:</label>
-          <input name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
-          
-          <input type="submit" value="Signup" />
+        <form className="move-the-form" onSubmit={this.handleFormSubmit}>
+          <label>Username</label>
+          <input className="the-inputs" type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
+          <br/>
+          <br/>
+          <label>Password</label>
+          <input className="the-inputs" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
+
+<br/>
+<br/>
+          <label>First name</label>
+          <input className="the-inputs" name="firstName" value={this.state.firstName} onChange={ e => this.handleChange(e)} />
+<br/>
+<br/>
+          <label>Last name</label>
+          <input className="the-inputs" name="lastName" value={this.state.lastName} onChange={ e => this.handleChange(e)}/>
+          <br/><br/>
+
+          <label>Favorite Club</label>
+          <input className="the-inputs" name="favoriteClub" value={this.state.favoriteClub} onChange={ e => this.handleChange(e)}/>
+          <br/><br/>
+
+          <label>Player position</label>
+          <input className="the-inputs" name="playerPosition" value={this.state.playerPosition} onChange={ e => this.handleChange(e)}/>
+          <br/><br/>
+
+          <label>Email</label>
+          <input className="the-inputs" name="email" value={this.state.email} onChange={ e => this.handleChange(e)}/>
+          <br/><br/>
+
+          <input className="the-inputs" type="submit" value="Signup" />
         </form>
   
         <p>Already have account? 

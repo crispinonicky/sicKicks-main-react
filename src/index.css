@@ -21,11 +21,6 @@ padding-top: 50px;
 }
 
 
-
-.move-it-all {
-  /* padding-left: 900px; */
-}
-
 .whatever {
   text-decoration: none;
   color: gray;
@@ -39,7 +34,7 @@ li {
 
 
 .for-signup {
-  background-color: gray;
+  background-color: lightblue;
   /* padding-top: 100px; */
   width: 600px;
   float: right;
@@ -49,4 +44,8 @@ li {
 
 #for-h1 {
      padding-left: 150px;
+}
+
+.move-the-form {
+  padding-left: 100px;
 }
