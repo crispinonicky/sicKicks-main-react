@@ -2,4 +2,48 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+
+}
+
+
+.another-class {
+display: flex;
+/* float: right; */
+margin: 20px;
+background-color: turquoise;
+margin: 0px;
+padding: 0px;
+padding-left: 800px;
+padding-top: 50px;
+}
+
+
+.whatever {
+  text-decoration: none;
+  color: gray;
+  list-style-type: none;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+
+.for-signup {
+  background-color: rgba(64 , 224, 208, 0.09);
+  /* padding-top: 100px; */
+  width: 600px;
+  float: right;
+  height: 710px;
+}
+
+
+#for-h1 {
+     padding-left: 150px;
+}
+
+.move-the-form {
+  padding-left: 100px;
 }

@@ -45,15 +45,22 @@ class App extends Component {
   render() {
     this.fetchUser();
     return (
-      <div className="App">
+      <div>
+      <div className="move-it-all App another-class">
         <Navbar  setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
         <Switch>
-        <Route exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
-        <Route exact path='/signup' render={() => <Signup setTheUserInTheAppComponent={this.logMeIn}/>}/>
-          <Route exact path="/projects" component={ProjectList}/>
-          <Route exact path="/projects/:id" component={ProjectDetails} />
+        <Route className="for-both" exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
+          <Route exact path="/fields" component={ProjectList}/>
+          <Route exact path="/fields/:id" component={ProjectDetails} />
         </Switch>
- 
+ </div>
+
+
+ <div className="for-signup">
+<h1 id="for-h1">Create a new account</h1>
+<h2 id="for-h1">It's free</h2>
+        <Route className="for-both" exact path='/signup' render={() => <Signup setTheUserInTheAppComponent={this.logMeIn}/>}/>
+ </div>
       </div>
     );
   }
