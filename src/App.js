@@ -9,13 +9,14 @@ import AuthService from './components/auth/auth-service';
 import AddProject from './components/AddProject';
 
 
+
 import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   constructor(props){
     super(props)
     this.state = { loggedInUser: null };
-    // this.service = new AuthService();  
+    this.service = new AuthService();  
 
   }
 
