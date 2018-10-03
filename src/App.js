@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-// import ProjectList from './components/ProjectList';
-// import ProjectDetails from './components/ProjectDetails';
-// import Navbar from './components/Navbar';
+import ProjectList from './components/ProjectList';
+import ProjectDetails from './components/auth/ProjectDetails';
+import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Login from './components/Login';
-// import AuthService from './components/auth/auth-service';
+import AuthService from './components/auth/auth-service';
 
 
 import { Switch, Route } from 'react-router-dom';
@@ -15,7 +14,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = { loggedInUser: null };
-    this.service = new AuthService();
+    this.service = new AuthService();  
 
   }
 
@@ -24,12 +23,13 @@ class App extends Component {
       loggedInUser: userObj
     })
   }
+  
 
   fetchUser(){
     if( this.state.loggedInUser === null ){
       this.service.loggedin()
       .then(response =>{
-        this.setState({
+          this.setState({
           loggedInUser:  response
         }) 
       })
