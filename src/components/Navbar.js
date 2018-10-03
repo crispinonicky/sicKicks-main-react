@@ -43,7 +43,7 @@ class Navbar extends Component {
         <div>
         <nav className="nav-style">
           <ul>
-            <li><Link to='/signup' style={{ textDecoration: 'none' }}>Signup</Link></li>
+            <li><Link to='/signup' className="whatever">Signup</Link></li>
           </ul>
         </nav>
         </div>
