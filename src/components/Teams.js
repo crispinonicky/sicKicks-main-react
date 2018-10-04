@@ -15,8 +15,14 @@ class Teams extends Component {
      
         <div className="Teams">
 
-<h1>This is where you can create new teams, join an existing one, or view the ones that you're currently a part of!</h1>
+<h1>Teams Page</h1>
 
+
+<h2>Create a new team:</h2>
+
+<h2>View Teams that you're a part of:</h2>
+
+<h2>Search for a team:</h2>
         </div>
       )
     
