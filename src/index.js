@@ -9,7 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
     <Router>
-        <App />
+        <App {...this.props} />
     </Router>
 , document.getElementById('root'));
 registerServiceWorker();
