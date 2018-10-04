@@ -2,15 +2,23 @@
 import React, { Component } from 'react';
 import AuthService from './auth/auth-service';
 import {Link} from 'react-router-dom' 
+import { Redirect } from 'react-router-dom';
 
 class Login extends Component {
   constructor(props){
     super(props);
-    this.state = { username: '', password: '' };
+    this.state = { 
+      username: '', 
+      password: '',
+      redirect: false,
+     };
     this.service = new AuthService();
   }
 
   handleFormSubmit = (event) => {
+    // axios.post()
+    // .then(() => this.setState({ redirect: true }));
+    console.log(this.state.redirect);
     event.preventDefault();
     const username = this.state.username;
     const password = this.state.password;
@@ -42,7 +50,7 @@ class Login extends Component {
           <label>Password:</label>
           <input name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
           
-          <input type="submit" value="Signup" />
+          <input type="submit" value="Login" />
         </form>
   
         <p>Don't have an account? 
