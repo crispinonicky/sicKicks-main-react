@@ -31,7 +31,10 @@
 
 .move-this {
 width: 200px;
-background-color: gray;
 position: absolute;
+/* display: flex;
+justify-content: center;
+padding-left: 100px;
+justify-content: space-around */
 
 }

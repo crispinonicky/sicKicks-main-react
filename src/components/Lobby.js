@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Profile from './Profile';
 
 
 
@@ -19,7 +20,18 @@ class Lobby extends Component {
         
      
         <div className="move-this">
-            <h1>Welcome to Lobby page</h1>
+
+        <div>
+            <h1>Community</h1>
+        </div>
+
+        <div>
+        <h1>Fields</h1>
+        </div>
+
+        <div>
+            <h1>Teams</h1>
+        </div>
         </div>
       )
     
