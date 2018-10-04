@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import AuthService from './auth/auth-service';
-import {Link} from 'react-router-dom' 
+import {Link} from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import '../App.css';
+
 
 class Signup extends Component {
   constructor(props){
@@ -43,8 +46,10 @@ class Signup extends Component {
   
   render(){
     return(
-      <div>
+      <div className="for-signup">
         <form className="move-the-form" onSubmit={this.handleFormSubmit}>
+        <h1 id="for-h1">Create a new account</h1>
+<h2 id="for-h1">It's free</h2> 
           <label>Username</label>
           <input className="the-inputs" type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
           <br/>
