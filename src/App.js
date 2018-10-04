@@ -9,7 +9,9 @@ import AuthService from './components/auth/auth-service';
 import Lobby from './components/Lobby';
 import { Link } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
-
+import Profile from './components/Profile'
+import Fields from './components/Fields'
+import Teams from './components/Teams'
 
 
 class App extends Component {
@@ -67,8 +69,12 @@ class App extends Component {
       
 
         <Switch>
+        <Route exact path="/fields" component={Fields} />
+          <Route exact path="/profile" component={Profile} />
           <Route exact path="/lobby" component={Lobby} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/teams" component={Teams} />
+
         <Signup/>
         </Switch>
       </div>

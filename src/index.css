@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: sans-serif;  
 
 
 }
@@ -46,4 +46,40 @@ li {
 
 .move-the-form {
   padding-left: 100px;
+}
+
+.lobby-card{
+  /* height: 50vh; */
+  /* width: 25vw; */
+  /* padding-right: 5vw; */
+  
+  margin: 100px;
+  /* background-color: gray; */
+  border: 1px solid black;
+  /* border-radius: 50%; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+
+
+
+.move-this {
+  display: flex;
+  justify-content: center;
+justify-content:space-evenly;
+padding-left:  620px;
+padding-top: 120px;
+}
+
+.first-one {
+font-size: 30px;
+color: black;
+padding-top: 15px;
+
+}
+
+
+a {
+  text-decoration: none;
+  color: yellow;
 }
