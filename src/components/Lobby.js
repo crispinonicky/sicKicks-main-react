@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../App.css';
 
 
 
@@ -17,7 +18,7 @@ class Lobby extends Component {
       return(
         
      
-        <div className="App">
+        <div className="move-this">
        <h1>Welcome to Lobby page</h1>
         </div>
       )
