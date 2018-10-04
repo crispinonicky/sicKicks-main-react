@@ -8,15 +8,17 @@ import Login from './components/Login';
 import AuthService from './components/auth/auth-service';
 import Lobby from './components/Lobby';
 import { Link } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 
-
-import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   constructor(props){
     super(props)
-    this.state = { loggedInUser: null };
+    this.state = { 
+      loggedInUser: null,
+      redirect: false,
+     };
     this.service = new AuthService();  
 
   }
@@ -32,37 +34,63 @@ class App extends Component {
     if( this.state.loggedInUser === null ){
       this.service.loggedin()
       .then(response =>{
+        this.props.history.push('/lobby');
           this.setState({
-          loggedInUser:  response
+            redirect: true,
+            loggedInUser:  response
         }) 
       })
       .catch( err =>{
         this.setState({
+          redirect: false,
           loggedInUser:  false
         }) 
       })
     }
   }
 
+//  lobbyIsIn()  {
+//    if(this.state.loggedInUser === true) {
+//      <Navbar />
+
+//    }
+//  }
+
 
   render() {
+    console.log(this.state)
     this.fetchUser();
-    return (
-      <div>
-      <div className="move-it-all App another-class">
-        <Navbar  setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
+    // if(this.state.loggedInUser !== null){
+    //   this.setState({redirect: true})
+    // } else {
+    //   this.setState({redirect: false})
+    // }
+    // if(this.state.redirect) {
+    //   return <Redirect to="/lobby" />
+    // } else {
+
+      return (  
+        <div>
+  
+          <div className="move-it-all App another-class">
+            <Navbar  setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
+            {/* <Switch>
+              <Route className="for-both" exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
+            </Switch> */}
+          </div>
+  {/* <li>
+  <Link to='/lobby'>Lobby</Link>
+  </li> */}
         <Switch>
-        <Route className="for-both" exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
+          <Route className="for-both" exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
+          <Route exact path="/lobby" component={Lobby} />
+          <Route exact path="/signup" component={Signup} />
+        <Signup/>
         </Switch>
- </div>
-
-{/* <Lobby /> */}
-<Signup/>
-
- </div>
-
-    );
-  }
+      </div>
+      );
+    }
+  // }
 }
 
 export default App;

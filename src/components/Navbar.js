@@ -34,7 +34,7 @@ class Navbar extends Component {
               <Link to='/' style={{ textDecoration: 'none' }}>Projects</Link>
             </li>
             <li>
-            <Link to='/Lobby' style={{ textDecoration: 'none' }}>Lobby</Link>
+              <Link to='/lobby' style={{ textDecoration: 'none' }}>Lobby</Link>
 
               </li>
             <li>
