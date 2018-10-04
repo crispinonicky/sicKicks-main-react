@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import '../App.css';
 
 
-class Profile extends Component {
+class Teams extends Component {
   constructor(props){
     super(props);
     this.state = {}
@@ -13,13 +13,13 @@ class Profile extends Component {
       return(
         
      
-        <div className="Profile">
+        <div className="Teams">
 
-<h1>Welcome to Profile, Create a free account!</h1>
+<h1>This is where you can create new teams, join an existing one, or view the ones that you're currently a part of!</h1>
 
         </div>
       )
     
     }
 }
-  export default Profile;
+  export default Teams;

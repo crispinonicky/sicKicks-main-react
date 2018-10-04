@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import '../App.css';
 
 
-class Profile extends Component {
+class Fields extends Component {
   constructor(props){
     super(props);
     this.state = {}
@@ -13,13 +13,13 @@ class Profile extends Component {
       return(
         
      
-        <div className="Profile">
+        <div className="Fields">
 
-<h1>Welcome to Profile, Create a free account!</h1>
+<h1>See what field is available...And it's all free!</h1>
 
         </div>
       )
     
     }
 }
-  export default Profile;
+  export default Fields;
