@@ -34,15 +34,15 @@ class App extends Component {
     if( this.state.loggedInUser === null ){
       this.service.loggedin()
       .then(response =>{
-        this.props.history.push('/lobby');
+        // this.props.history.push('/lobby');
           this.setState({
-            redirect: true,
+            // redirect: true,
             loggedInUser:  response
         }) 
       })
       .catch( err =>{
         this.setState({
-          redirect: false,
+          // redirect: false,
           loggedInUser:  false
         }) 
       })
@@ -69,20 +69,22 @@ class App extends Component {
     //   return <Redirect to="/lobby" />
     // } else {
 
+    // (this.state.loggedInUser ? <Redirect to="/lobby" /> : <Redirect to="/" />) 
+
       return (  
         <div>
   
           <div className="move-it-all App another-class">
-            <Navbar  setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
+          <Navbar {...this.props} setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
             {/* <Switch>
               <Route className="for-both" exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
             </Switch> */}
           </div>
   {/* <li>
   <Link to='/lobby'>Lobby</Link>
-  </li> */}
+</li> */}
         <Switch>
-          <Route className="for-both" exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
+          <Route className="for-both" exact path="/" render={() => <Login {...this.props} setTheUserInTheAppComponent={this.logMeIn}/> }/>
           <Route exact path="/lobby" component={Lobby} />
           <Route exact path="/signup" component={Signup} />
         <Signup/>
