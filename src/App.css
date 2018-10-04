@@ -32,9 +32,11 @@
 .move-this {
 width: 200px;
 position: absolute;
-/* display: flex;
-justify-content: center;
-padding-left: 100px;
-justify-content: space-around */
 
+
+}
+
+
+.the-video {
+  padding-left: 300px;
 }
