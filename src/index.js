@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import axios from 'axios';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 ReactDOM.render(
     <Router>
-        <App {...this.props} />
+        <Route component = {App} />
     </Router>
 , document.getElementById('root'));
 registerServiceWorker();

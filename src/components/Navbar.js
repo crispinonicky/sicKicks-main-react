@@ -21,6 +21,7 @@ class Navbar extends Component {
     this.service.logout()
     .then(()=>{
       this.props.setTheUserInTheAppComponent(null)
+      this.props.history.push('/');
     })
   }
     
