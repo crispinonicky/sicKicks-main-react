@@ -9,7 +9,9 @@ import AuthService from './components/auth/auth-service';
 import Lobby from './components/Lobby';
 import { Link } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
-
+import Profile from './components/Profile'
+import Fields from './components/Fields'
+import Teams from './components/Teams'
 
 
 class App extends Component {
@@ -34,9 +36,9 @@ class App extends Component {
     if( this.state.loggedInUser === null ){
       this.service.loggedin()
       .then(response =>{
-        // this.props.history.push('/lobby');
+
           this.setState({
-            // redirect: true,
+
             loggedInUser:  response
         }) 
       })
@@ -49,44 +51,30 @@ class App extends Component {
     }
   }
 
-//  lobbyIsIn()  {
-//    if(this.state.loggedInUser === true) {
-//      <Navbar />
 
-//    }
-//  }
 
 
   render() {
     console.log(this.state)
     this.fetchUser();
-    // if(this.state.loggedInUser !== null){
-    //   this.setState({redirect: true})
-    // } else {
-    //   this.setState({redirect: false})
-    // }
-    // if(this.state.redirect) {
-    //   return <Redirect to="/lobby" />
-    // } else {
 
-    // (this.state.loggedInUser ? <Redirect to="/lobby" /> : <Redirect to="/" />) 
 
       return (  
         <div>
   
           <div className="move-it-all App another-class">
           <Navbar {...this.props} setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
-            {/* <Switch>
-              <Route className="for-both" exact path="/" render={() => <Login setTheUserInTheAppComponent={this.logMeIn}/>}/>
-            </Switch> */}
-          </div>
-  {/* <li>
-  <Link to='/lobby'>Lobby</Link>
-</li> */}
-        <Switch>
           <Route className="for-both" exact path="/" render={() => <Login {...this.props} setTheUserInTheAppComponent={this.logMeIn}/> }/>
+          </div>
+      
+
+        <Switch>
+        <Route exact path="/fields" component={Fields} />
+          <Route exact path="/profile" component={Profile} />
           <Route exact path="/lobby" component={Lobby} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/teams" component={Teams} />
+
         <Signup/>
         </Switch>
       </div>

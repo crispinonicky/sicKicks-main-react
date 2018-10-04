@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Profile from './Profile';
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,17 +22,18 @@ class Lobby extends Component {
      
         <div className="move-this">
 
-        <div>
-            <h1>Community</h1>
+        <div className = "lobby-card first-one">
+            <Link to={"/profile"}> Profile</Link>
         </div>
 
-        <div>
-        <h1>Fields</h1>
+        <div className = "lobby-card first-one">
+        <Link to={"/fields"}> Fields</Link>
         </div>
 
-        <div>
-            <h1>Teams</h1>
+        <div className = "lobby-card first-one">
+        <Link to={"/teams"}>Teams</Link>
         </div>
+
         </div>
       )
     
@@ -39,20 +41,3 @@ class Lobby extends Component {
 }
   export default Lobby;
 
-  // components/About.js
-
-// import React from 'react';
-
-// const Lobby = () => {
-//   return (
-//     <div>
-//       <div>
-//         <h1>We da best</h1>
-
-
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Lobby;
