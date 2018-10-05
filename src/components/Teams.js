@@ -34,7 +34,7 @@ class Teams extends Component {
               <div key={team._id}>
                 <Link to={`/teams/${team._id}`}>
                   <h3>{team.teamName}</h3>
-                  <h4>{team.league}</h4>
+                  {/* <h4>{team.league}</h4> */}
                 </Link>
               </div>
             )})

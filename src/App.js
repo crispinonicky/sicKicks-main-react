@@ -12,6 +12,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Profile from './components/Profile'
 import Fields from './components/Fields'
 import Teams from './components/Teams'
+import JustForImage from './components/JustForImage'
 
 
 class App extends Component {
@@ -65,11 +66,15 @@ class App extends Component {
           <Navbar {...this.props} setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
           <Route className="for-both" exact path="/" render={() => <Login {...this.props} setTheUserInTheAppComponent={this.logMeIn}/> }/>
           </div>
-      <div className="add-image-here">
 
-      </div>
+          
+        <Route exact path="/" component={JustForImage}/>
 
-        <Switch>
+
+     
+   
+      <div className="the-signup-thing">
+      <Switch>
         <Route exact path="/fields" component={Fields} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/lobby" component={Lobby} />
@@ -78,6 +83,9 @@ class App extends Component {
 
         <Signup/>
         </Switch>
+      </div>
+
+   
       </div>
       );
     }

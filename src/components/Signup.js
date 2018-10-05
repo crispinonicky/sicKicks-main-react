@@ -47,6 +47,7 @@ class Signup extends Component {
   
   render(){
     return(
+        <div className = "sign-up-box">
       <div className="for-signup">
         <form className="move-the-form" onSubmit={this.handleFormSubmit}>
         <h1 id="for-h1">Create a new account</h1>
@@ -81,13 +82,19 @@ class Signup extends Component {
           <br/><br/>
 
           <input className="the-inputs" type="submit" value="Signup" />
+
         </form>
+
+        
   
         <p className="the-h1-main">Already have account? 
             {/* <Link className="whatever" to={"/"}> Login</Link> */}
         </p>
   
       </div>
+
+                </div>
+
     )
   }
 
