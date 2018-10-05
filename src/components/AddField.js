@@ -2,21 +2,24 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 
-class AddProject extends Component {
+class AddField extends Component {
   constructor(props){
       super(props);
-      this.state = { title: "", description: "" };
+      this.state = { 
+        teamsPlaying: [], 
+
+
+       };
   }
    
   handleFormSubmit = (event) => {
     event.preventDefault();
-    // const {title, description} = this.state;
-    const title = this.state.title;
-    const description = this.state.description;
-    axios.post("http://localhost:5000/api/projects", {title, description })
+    // const {teamsPlaying} = this.state;
+    const teamsPlaying = this.state.teamsPlaying;
+    axios.post("http://localhost:5000/api/fields", {teamsPlaying})
     .then( () => {
         this.props.getData();
-        this.setState({title: "", description: ""});
+        this.setState({TeamsPlaying: []});
     })
     .catch( error => console.log(error) )
   }
@@ -34,16 +37,12 @@ class AddProject extends Component {
     return(
       <div>
         <form onSubmit={this.handleFormSubmit}>
-          <label>Title:</label>
-          <input type="text" name="title" value={this.state.title} onChange={ e => this.handleChange(e)}/>
-          <label>Description:</label>
-          <textarea name="description" value={this.state.description} onChange={ e => this.handleChange(e)} />
-          
-          <input type="submit" value="Submit" />
+          <label>Teams Playing:</label>
+          <input type="text" name="teamsPlaying" value={this.state.teamsPlaying} onChange={ e => this.handleChange(e)}/>
         </form>
       </div>
     )
   }
 }
 
-export default AddProject;
+export default AddField;

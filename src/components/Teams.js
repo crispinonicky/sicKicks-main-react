@@ -1,31 +1,51 @@
 import React, { Component } from 'react';
-// import '../App.css';
-
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import AddTeam from './AddTeam';
 
 class Teams extends Component {
-  constructor(props){
-    super(props);
-    this.state = {}
+  constructor(){
+      super();
+      this.state = { listOfTeams: [] };
   }
-   
+
+  getAllTeams = () =>{
+    axios.get(`http://localhost:5000/api/teams`)
+    .then(responseFromApi => {
+      this.setState({
+        listOfTeams: responseFromApi.data
+      })
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+  }
+
+  componentDidMount() {
+    this.getAllTeams();
+  }
+
   render(){
-    
-      return(
-        
-     
-        <div className="Teams">
-
-<h1>Teams Page</h1>
-
-
-<h2>Create a new team:</h2>
-
-<h2>View Teams that you're a part of:</h2>
-
-<h2>Search for a team:</h2>
+    return(
+      <div>
+        <div style={{width: '60%', float:"left"}}>
+          { this.state.listOfTeams.map((team, index) => {
+            return (
+              <div key={team._id}>
+                <Link to={`/teams/${team._id}`}>
+                  <h3>{team.teamName}</h3>
+                  <h4>{team.league}</h4>
+                </Link>
+              </div>
+            )})
+          }
         </div>
-      )
-    
-    }
+        <div style={{width: '40%', float:"right"}}>
+            <AddTeam getData={() => this.getAllTeams()}/>
+        </div>
+      </div>
+    )
+  }
 }
-  export default Teams;
+
+export default Teams;
