@@ -1,48 +1,19 @@
-// import React, { Component } from 'react';
-// // import '../App.css';
-
-
-// class Fields extends Component {
-//   constructor(props){
-//     super(props);
-//     this.state = {}
-//   }
-   
-//   render(){
-    
-//       return(
-        
-     
-//         <div className="Fields">
-
-// <h1>See what field is available...And it's all free!</h1>
-
-//         </div>
-//       )
-    
-//     }
-// }
-//   export default Fields;
-
-// components/Fields.js
-
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import AddTeam from './AddTeam';
 
-import AddField from './AddField';
-
-class Fields extends Component {
+class Teams extends Component {
   constructor(){
       super();
-      this.state = { listOfFields: [] };
+      this.state = { listOfTeams: [] };
   }
 
-  getAllFields = () =>{
-    axios.get(`http://localhost:5000/api/fields`)
+  getAllTeams = () =>{
+    axios.get(`http://localhost:5000/api/teams`)
     .then(responseFromApi => {
       this.setState({
-        listOfFields: responseFromApi.data
+        listOfTeams: responseFromApi.data
       })
     })
     .catch((err)=>{
@@ -51,29 +22,29 @@ class Fields extends Component {
   }
 
   componentDidMount() {
-    this.getAllFields();
+    this.getAllTeams();
   }
 
   render(){
     return(
       <div>
         <div style={{width: '60%', float:"left"}}>
-          { this.state.listOfFields.map((field, index) => {
+          { this.state.listOfTeams.map((team, index) => {
             return (
-              <div key={field._id}>
-                <Link to={`/fields/${field._id}`}>
-                  <h3>{field.teamsPlaying}</h3>
+              <div key={team._id}>
+                <Link to={`/teams/${team._id}`}>
+                  <h3>{team.teamsPlaying}</h3>
                 </Link>
               </div>
             )})
           }
         </div>
         <div style={{width: '40%', float:"right"}}>
-            <AddField getData={() => this.getAllFields()}/>
+            <AddTeam getData={() => this.getAllTeams()}/>
         </div>
       </div>
     )
   }
 }
 
-export default Fields;
+export default Teams;

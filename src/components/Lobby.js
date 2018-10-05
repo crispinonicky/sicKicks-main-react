@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import '../index.css';
 import Profile from './Profile';
 import { Link } from 'react-router-dom';
 
