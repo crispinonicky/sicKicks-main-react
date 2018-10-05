@@ -24,6 +24,9 @@ class Navbar extends Component {
       this.props.history.push('/');
     })
   }
+
+
+
     
   render(){
     if(this.state.loggedInUser){
@@ -51,4 +54,6 @@ class Navbar extends Component {
     }
     }
   }
+
+  
   export default Navbar;

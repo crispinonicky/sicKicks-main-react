@@ -2,27 +2,30 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 
-class AddProject extends Component {
+class AddField extends Component {
   constructor(props){
       super(props);
-      this.state = { title: "", description: "" };
+      this.state = { 
+        teamsPlaying: [], 
+
+
+       };
   }
    
   handleFormSubmit = (event) => {
     event.preventDefault();
-    // const {title, description} = this.state;
-    const title = this.state.title;
-    const description = this.state.description;
-    axios.post("http://localhost:5000/api/projects", {title, description })
+    // const {teamsPlaying} = this.state;
+    const teamsPlaying = this.state.teamsPlaying;
+    axios.post("http://localhost:5000/api/fields", {teamsPlaying})
     .then( () => {
         this.props.getData();
-        this.setState({title: "", description: ""});
+        this.setState({TeamsPlaying: []});
     })
     .catch( error => console.log(error) )
   }
 
   handleChange = (event) => {  
-      const {name, value} = event.target;
+      const teamsPlaying = event.target.teamsPlaying;
     //   ^ this is just fancy syntax for the 2 lines below
     //   const name = event.target.name;
     //   const value = event.target.value;

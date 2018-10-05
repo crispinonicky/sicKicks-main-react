@@ -1,4 +1,4 @@
-
+import React, { Component } from 'react';
 import axios from 'axios';
 
 class ProfileDetails {
@@ -10,6 +10,17 @@ class ProfileDetails {
     this.service = service;
   }
 
+
+  signup = (username, password) => {
+    return this.service.post('/signup', {username, password})
+    .then(response => response.data)
+  }
+
+
+  login = (username, password) => {
+    return this.service.post('/login', {username, password})
+    .then(response => response.data)
+  }
 
 
   loggedin = () => {
