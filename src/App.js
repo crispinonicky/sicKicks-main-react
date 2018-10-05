@@ -59,7 +59,6 @@ class App extends Component {
     console.log(this.state)
     this.fetchUser();
 
-
       return (  
         <div>
 
@@ -69,7 +68,7 @@ class App extends Component {
           </div>
 
           
-        <Route exact path="/" component={JustForImage}/> }/>
+        <Route exact path="/" component={JustForImage}/>
 
 
      
@@ -90,7 +89,6 @@ class App extends Component {
       </div>
       );
     }
-  // }
 }
 
 export default App;

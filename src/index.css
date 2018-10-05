@@ -1,21 +1,19 @@
 body {
-  margin: 0;
-  padding: 0;
+
+
   font-family: sans-serif;  
-
-
 }
 
 
 .another-class {
 display: flex;
 /* float: right; */
-margin: 20px;
+/* margin: 20px; */
 background-color: rgba(0, 0, 0, 0.6);
-margin: 0px;
-padding: 0px;
-padding-left: 800px;
-padding-top: 50px;
+/* margin: 0px; */
+/* padding: 0px; */
+/* padding-left: 800px; */
+/* padding-top: 50px; */
 color: white;
 }
 
@@ -32,15 +30,6 @@ li {
 }
 
 
-.for-signup {
-  background-color: rgba(64 , 224, 208, 0.09);
-  /* padding-top: 100px; */
-  width: 600px;
-  float: right;
-  height: 539px;
-}
-
-
 #for-h1 {
      padding-left: 150px;
 }
@@ -54,9 +43,10 @@ li {
   /* width: 25vw; */
   /* padding-right: 5vw; */
   
-  margin: 100px;
+  /* margin: 100px; */
   /* background-color: gray; */
   border: 1px solid black;
+background-color: gray;
   /* border-radius: 50%; */
   /* display: flex; */
   /* justify-content: space-between; */
@@ -69,7 +59,16 @@ li {
   justify-content: center;
 justify-content:space-evenly;
 padding-left:  620px;
-padding-top: 120px;
+margin: 0px;
+padding: 0px;
+
+}
+
+.different-class {
+  /* position: absolute; */
+
+
+
 }
 
 .first-one {
@@ -86,17 +85,18 @@ a {
 
 .add-image-here {
   background-image: url('./images/action-backlit-beach-978695.jpg');
-  height: 100vh;
+  height: 90vh;
+  overflow: hidden;
+  background-position-y: -150px;
   background-size: cover;
- overflow: hidden;
- background-position-y: -150px;
 }
 
 
 .the-signup-thing {
-position: absolute;
-bottom:150px;
-right: 0px;
+/* position: absolute; */
+/* bottom:250px; */
+/* margin-bottom: 100px; */
+/* right: 0px; */
 background-color: rgba(0, 0, 0, 0.6);
 color: white;
 }

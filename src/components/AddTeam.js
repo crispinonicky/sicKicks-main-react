@@ -38,8 +38,8 @@ class AddTeam extends Component {
         <form onSubmit={this.handleFormSubmit}>
           <label>teamName:</label>
           <input type="text" name="teamName" value={this.state.teamName} onChange={ e => this.handleChange(e)}/>
-          <label>league:</label>
-          <input type="text" name="league" value={this.state.league} onChange={ e => this.handleChange(e)}/>          
+          {/* <label>league:</label>
+          <input type="text" name="league" value={this.state.league} onChange={ e => this.handleChange(e)}/>           */}
         </form>
       </div>
     )

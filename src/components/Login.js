@@ -15,6 +15,9 @@ class Login extends Component {
   }
 
   handleFormSubmit = (event) => {
+    // axios.post()
+    // .then(() => this.setState({ redirect: true }));
+    console.log(this.state.redirect);
     event.preventDefault();
     const username = this.state.username;
     const password = this.state.password;

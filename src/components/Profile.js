@@ -20,7 +20,7 @@ class Profile extends Component {
       return(
         
      
-        <div className="Profile">
+        <div className="profile">
 
 <h1>Welcome to Profile, Create a free account!</h1>
 
@@ -29,7 +29,6 @@ class Profile extends Component {
 Joey Smith<br/>
 Miami, FL<br/>
 Birthday (if they choose to show it)
-
 
 <h2>Summary/Bio:</h2>
 

@@ -10,9 +10,7 @@ class JustForImage extends Component {
   render(){
     return(
         <div className="add-image-here">
-        {/* <div className="the-logo-image">
-   
-        </div> */}
+       
          </div>
     )
   }

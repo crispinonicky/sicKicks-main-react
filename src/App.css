@@ -1,11 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+} */
 
 .App-header {
   background-color: #222;
@@ -22,20 +17,16 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 
 
 .move-this {
-  width: 200px;
-  /* position: absolute; */
   background-image: url('./images/cheering-crowd-event-17598.jpg');
   background-size: cover;
-  width: 820px;
+  height:  600px;
+  overflow: hidden;
   }
+
+  
 
 .the-video {
   padding-left: 300px;
@@ -46,3 +37,26 @@
   padding-top: 50px;
 }
 
+.for-signup {
+  background-color: rgba(64 , 224, 208, 0.09);
+  width: 45vw;
+  float: right;
+  height: 539px;
+  /* position: fixed; */
+}
+
+/* .sign-up-box{
+
+  margin-top: 20vh;
+} */
+
+.profile {
+/* background-color: blue; */
+/* top: 500px; */
+/* margin-top: 30vh; */
+}
+
+
+.nav-style {
+  background-color: red;
+}
