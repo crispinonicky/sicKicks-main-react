@@ -11,11 +11,12 @@ body {
 display: flex;
 /* float: right; */
 margin: 20px;
-background-color: turquoise;
+background-color: rgba(0, 0, 0, 0.6);
 margin: 0px;
 padding: 0px;
 padding-left: 800px;
 padding-top: 50px;
+color: white;
 }
 
 
@@ -36,7 +37,7 @@ li {
   /* padding-top: 100px; */
   width: 600px;
   float: right;
-  height: 710px;
+  height: 539px;
 }
 
 
@@ -81,5 +82,38 @@ padding-top: 15px;
 
 a {
   text-decoration: none;
-
 }
+
+.add-image-here {
+  background-image: url('./images/action-backlit-beach-978695.jpg');
+  height: 100vh;
+  background-size: cover;
+ overflow: hidden;
+ background-position-y: -150px;
+}
+
+
+.the-signup-thing {
+position: absolute;
+bottom:150px;
+right: 0px;
+background-color: rgba(0, 0, 0, 0.6);
+color: white;
+}
+
+
+.the-logo-image {
+  background-image: url('./images/thelogo.png');
+  height: 100px;
+  width:  250px;
+  background-size: cover;
+}
+
+/* .move-this {
+  width: 200px;
+  position: absolute;
+  background-image: url('./images/cheering-crowd-event-17598.jpg');
+  background-size: cover;
+  width: 820px;
+  } 
+    */
