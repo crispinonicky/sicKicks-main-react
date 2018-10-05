@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ProjectList from './components/ProjectList';
-import ProjectDetails from './components/auth/ProjectDetails';
+import ProjectDetails from './components/ProjectDetails';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Login from './components/Login';
@@ -61,12 +61,14 @@ class App extends Component {
 
       return (  
         <div>
-  
+
           <div className="move-it-all App another-class">
           <Navbar {...this.props} setTheUserInTheAppComponent={this.logMeIn} userInSession={this.state.loggedInUser} />
           <Route className="for-both" exact path="/" render={() => <Login {...this.props} setTheUserInTheAppComponent={this.logMeIn}/> }/>
           </div>
-      
+      <div className="add-image-here">
+
+      </div>
 
         <Switch>
         <Route exact path="/fields" component={Fields} />
