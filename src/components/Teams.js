@@ -1,31 +1,79 @@
-import React, { Component } from 'react';
-// import '../App.css';
+// import React, { Component } from 'react';
+// // import '../App.css';
 
 
-class Teams extends Component {
-  constructor(props){
-    super(props);
-    this.state = {}
-  }
+// class Fields extends Component {
+//   constructor(props){
+//     super(props);
+//     this.state = {}
+//   }
    
-  render(){
+//   render(){
     
-      return(
+//       return(
         
      
-        <div className="Teams">
+//         <div className="Fields">
 
-<h1>Teams Page</h1>
+// <h1>See what field is available...And it's all free!</h1>
 
-
-<h2>Create a new team:</h2>
-
-<h2>View Teams that you're a part of:</h2>
-
-<h2>Search for a team:</h2>
-        </div>
-      )
+//         </div>
+//       )
     
-    }
+//     }
+// }
+//   export default Fields;
+
+// components/Fields.js
+
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+
+import AddField from './AddField';
+
+class Fields extends Component {
+  constructor(){
+      super();
+      this.state = { listOfFields: [] };
+  }
+
+  getAllFields = () =>{
+    axios.get(`http://localhost:5000/api/fields`)
+    .then(responseFromApi => {
+      this.setState({
+        listOfFields: responseFromApi.data
+      })
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+  }
+
+  componentDidMount() {
+    this.getAllFields();
+  }
+
+  render(){
+    return(
+      <div>
+        <div style={{width: '60%', float:"left"}}>
+          { this.state.listOfFields.map((field, index) => {
+            return (
+              <div key={field._id}>
+                <Link to={`/fields/${field._id}`}>
+                  <h3>{field.teamsPlaying}</h3>
+                </Link>
+              </div>
+            )})
+          }
+        </div>
+        <div style={{width: '40%', float:"right"}}>
+            <AddField getData={() => this.getAllFields()}/>
+        </div>
+      </div>
+    )
+  }
 }
-  export default Teams;
+
+export default Fields;

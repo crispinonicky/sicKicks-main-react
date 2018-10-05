@@ -82,8 +82,8 @@ class Signup extends Component {
           <input className="the-inputs" type="submit" value="Signup" />
         </form>
   
-        <p>Already have account? 
-            <Link className="whatever" to={"/"}> Login</Link>
+        <p className="the-h1-main">Already have account? 
+            {/* <Link className="whatever" to={"/"}> Login</Link> */}
         </p>
   
       </div>

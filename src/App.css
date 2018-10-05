@@ -32,6 +32,10 @@
 .move-this {
 width: 200px;
 position: absolute;
+background-image: url('./cheering-crowd-event-17598.jpg');
+background-size: cover;
+width: 820px;
+height: 100%;
 
 
 }
@@ -39,4 +43,17 @@ position: absolute;
 
 .the-video {
   padding-left: 300px;
+}
+
+.the-h1-main {
+  padding-left: 150px;
+  padding-top: 50px;
+}
+
+.add-image-here {
+  /* background-image: url('./action-backlit-beach-978695.jpg');
+  height: 300px;
+  position: absolute;
+  background-size: cover; */
+
 }

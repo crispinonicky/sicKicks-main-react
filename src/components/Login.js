@@ -51,7 +51,7 @@ class Login extends Component {
         </form>
   
         <p>Join us, be pro! 
-            <Link className="whatever" to={"/signup"}> Signup</Link>
+            {/* <Link className="whatever" to={"/signup"}> Signup</Link> */}
         </p>
   
       </div>
