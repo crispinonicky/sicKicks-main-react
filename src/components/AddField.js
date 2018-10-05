@@ -25,7 +25,7 @@ class AddField extends Component {
   }
 
   handleChange = (event) => {  
-      const teamsPlaying = event.target.teamsPlaying;
+      const {name, value} = event.target;
     //   ^ this is just fancy syntax for the 2 lines below
     //   const name = event.target.name;
     //   const value = event.target.value;
@@ -37,16 +37,12 @@ class AddField extends Component {
     return(
       <div>
         <form onSubmit={this.handleFormSubmit}>
-          <label>Title:</label>
-          <input type="text" name="title" value={this.state.title} onChange={ e => this.handleChange(e)}/>
-          <label>Description:</label>
-          <textarea name="description" value={this.state.description} onChange={ e => this.handleChange(e)} />
-          
-          <input type="submit" value="Submit" />
+          <label>Teams Playing:</label>
+          <input type="text" name="teamsPlaying" value={this.state.teamsPlaying} onChange={ e => this.handleChange(e)}/>
         </form>
       </div>
     )
   }
 }
 
-export default AddProject;
+export default AddField;
