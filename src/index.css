@@ -17,6 +17,7 @@ padding: 0px;
 padding-left: 800px;
 padding-top: 50px;
 color: white;
+
 }
 
 
@@ -34,10 +35,15 @@ li {
 
 .for-signup {
   background-color: rgba(64 , 224, 208, 0.09);
+  /* background-color: black;   */
   /* padding-top: 100px; */
-  width: 600px;
-  float: right;
+  /* width: 600px; */
   height: 539px;
+  position: absolute;
+  bottom: 100px;
+  left: 850px;
+  overflow: hidden;
+
 }
 
 
@@ -86,7 +92,7 @@ a {
 
 .add-image-here {
   background-image: url('./images/action-backlit-beach-978695.jpg');
-  height: 100vh;
+  height: 90vh;
   background-size: cover;
  overflow: hidden;
  background-position-y: -150px;
@@ -94,7 +100,7 @@ a {
 
 
 .the-signup-thing {
-position: absolute;
+/* position: absolute; */
 bottom:150px;
 right: 0px;
 background-color: rgba(0, 0, 0, 0.6);

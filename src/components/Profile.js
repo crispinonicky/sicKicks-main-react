@@ -20,7 +20,7 @@ class Profile extends Component {
       return(
         
      
-        <div className="Profile">
+        <div className="profile">
 
 <h1>Welcome to Profile, Create a free account!</h1>
 

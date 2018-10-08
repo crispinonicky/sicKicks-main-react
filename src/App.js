@@ -69,12 +69,12 @@ class App extends Component {
           </div>
 
           
-        <Route exact path="/" component={JustForImage}/> }/>
+        <Route exact path="/" component={JustForImage}/>
 
 
      
    
-      <div className="the-signup-thing">
+      <div>
       <Switch>
         <Route exact path="/fields" component={Fields} />
           <Route exact path="/profile" component={Profile} />
