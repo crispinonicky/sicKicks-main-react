@@ -11,6 +11,7 @@ body {
 display: flex;
 background-color: rgba(0, 0, 0, 0.6);
 color: white;
+
 }
 
 
@@ -24,6 +25,22 @@ color: white;
 li {
   list-style-type: none;
 }
+
+
+
+.for-signup {
+  background-color: rgba(64 , 224, 208, 0.09);
+  /* background-color: black;   */
+  /* padding-top: 100px; */
+  /* width: 600px; */
+  height: 539px;
+  position: absolute;
+  bottom: 100px;
+  left: 850px;
+  overflow: hidden;
+
+}
+
 
 
 #for-h1 {
@@ -68,13 +85,19 @@ a {
 .add-image-here {
   background-image: url('./images/action-backlit-beach-978695.jpg');
   height: 90vh;
+
   overflow: hidden;
   background-position-y: -150px;
+
   background-size: cover;
 }
 
 
 .the-signup-thing {
+
+/* position: absolute; */
+bottom:150px;
+right: 0px;
 
 background-color: rgba(0, 0, 0, 0.6);
 color: white;

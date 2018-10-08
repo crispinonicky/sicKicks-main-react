@@ -76,7 +76,7 @@ class App extends Component {
 
      
    
-      <div className="the-signup-thing">
+      <div>
       <Switch>
         <Route exact path="/fields" component={Fields} />
           <Route exact path="/profile" component={Profile} />
