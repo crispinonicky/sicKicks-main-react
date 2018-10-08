@@ -21,7 +21,7 @@ class Lobby extends Component {
       return(
         
      
-        <div className="move-this">
+        <div className="move-this different-class">
 
         <div className = "lobby-card first-one">
             <Link to={"/profile"}> Profile</Link>

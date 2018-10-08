@@ -1,21 +1,15 @@
+/* 
+
 body {
-  margin: 0;
-  padding: 0;
+
+
   font-family: sans-serif;  
-
-
 }
 
 
 .another-class {
 display: flex;
-/* float: right; */
-margin: 20px;
 background-color: rgba(0, 0, 0, 0.6);
-margin: 0px;
-padding: 0px;
-padding-left: 800px;
-padding-top: 50px;
 color: white;
 
 }
@@ -33,6 +27,7 @@ li {
 }
 
 
+
 .for-signup {
   background-color: rgba(64 , 224, 208, 0.09);
   /* background-color: black;   */
@@ -47,6 +42,7 @@ li {
 }
 
 
+
 #for-h1 {
      padding-left: 150px;
 }
@@ -56,16 +52,9 @@ li {
 }
 
 .lobby-card{
-  /* height: 50vh; */
-  /* width: 25vw; */
-  /* padding-right: 5vw; */
-  
-  margin: 100px;
-  /* background-color: gray; */
   border: 1px solid black;
-  /* border-radius: 50%; */
-  /* display: flex; */
-  /* justify-content: space-between; */
+background-color: gray;
+
 }
 
 
@@ -75,8 +64,11 @@ li {
   justify-content: center;
 justify-content:space-evenly;
 padding-left:  620px;
-padding-top: 120px;
+margin: 0px;
+padding: 0px;
+
 }
+
 
 .first-one {
 font-size: 30px;
@@ -93,16 +85,20 @@ a {
 .add-image-here {
   background-image: url('./images/action-backlit-beach-978695.jpg');
   height: 90vh;
+
+  overflow: hidden;
+  background-position-y: -150px;
+
   background-size: cover;
- overflow: hidden;
- background-position-y: -150px;
 }
 
 
 .the-signup-thing {
+
 /* position: absolute; */
 bottom:150px;
 right: 0px;
+
 background-color: rgba(0, 0, 0, 0.6);
 color: white;
 }
@@ -114,12 +110,4 @@ color: white;
   width:  250px;
   background-size: cover;
 }
-
-/* .move-this {
-  width: 200px;
-  position: absolute;
-  background-image: url('./images/cheering-crowd-event-17598.jpg');
-  background-size: cover;
-  width: 820px;
-  } 
-    */
+ */

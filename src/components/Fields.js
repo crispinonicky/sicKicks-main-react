@@ -29,14 +29,16 @@ class Fields extends Component {
   render(){
     return(
       <div>
-        <h1>See what field is available...And it's all free!</h1>
+        <h1>See what field is available!</h1>
         <div style={{width: '60%', float:"left"}}>
           { this.state.listOfFields.map((field, index) => {
             return (
               <div key={field._id}>
                 <Link to={`/fields/${field._id}`}>
-                  <h3>{field.teamsPlaying}</h3>
+                  <h3>{field.fieldName} ({field.teamsPlaying})</h3>
                 </Link>
+                <hr/>
+
               </div>
             )})
           }

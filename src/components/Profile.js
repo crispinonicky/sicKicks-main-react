@@ -30,7 +30,6 @@ Joey Smith<br/>
 Miami, FL<br/>
 Birthday (if they choose to show it)
 
-
 <h2>Summary/Bio:</h2>
 
 This is where the user's bio will go. They can change it by
