@@ -6,6 +6,7 @@ class AddField extends Component {
   constructor(props){
       super(props);
       this.state = { 
+        fieldName: "",
         teamsPlaying: [], 
 
 
@@ -15,11 +16,12 @@ class AddField extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     // const {teamsPlaying} = this.state;
+    const fieldName = this.state.fieldName;
     const teamsPlaying = this.state.teamsPlaying;
-    axios.post("http://localhost:5000/api/fields", {teamsPlaying})
+    axios.post("http://localhost:5000/api/fields", {fieldName, teamsPlaying})
     .then( () => {
         this.props.getData();
-        this.setState({TeamsPlaying: []});
+        this.setState({fieldName: "", TeamsPlaying: []});
     })
     .catch( error => console.log(error) )
   }
@@ -37,9 +39,12 @@ class AddField extends Component {
     return(
       <div className = "add-field">
         <form onSubmit={this.handleFormSubmit}>
+          <label>Field Name:</label>
+          <input type="text" name="fieldName" value={this.state.fieldName} onChange={ e => this.handleChange(e)}/>
+         <br/>
           <label>Teams Playing:</label>
           <input type="text" name="teamsPlaying" value={this.state.teamsPlaying} onChange={ e => this.handleChange(e)}/>
-          
+
           <input type="submit" value="Submit" />
         </form>
       </div>

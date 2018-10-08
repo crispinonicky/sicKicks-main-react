@@ -27,7 +27,7 @@ class FieldDetails extends Component {
   }
 
   renderEditForm = () => {
-    if(!this.state.teamsPlaying){
+    if(!this.state.fieldName){
         this.getSingleField();
         } else {
         //                                                    {...props} => so we can have 'this.props.history' in Edit.js
@@ -55,8 +55,8 @@ class FieldDetails extends Component {
   render(){
     return(
       <div>
-        <h1>{this.state.teamsPlaying}</h1>
-        {/* <p>{this.state.description}</p> */}
+        <h1>{this.state.fieldName}</h1>
+        <p>{this.state.teamsPlaying}</p>
         <button onClick={() => this.deleteField()}>Delete field</button>
 
         {this.renderEditForm()}
