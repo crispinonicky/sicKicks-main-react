@@ -23,7 +23,7 @@ class Signup extends Component {
     const favoriteClub = this.state.favoriteClub;
     const email = this.state.email;
   
-    this.service.signup(username, password)
+    this.service.signup(username, password, firstName, lastName, playerPosition, favoriteClub, email)
     .then( theUserObject => {
         this.setState({
             username: "", 
@@ -87,9 +87,7 @@ class Signup extends Component {
 
         
   
-        <p className="the-h1-main">Already have account? 
-            {/* <Link className="whatever" to={"/"}> Login</Link> */}
-        </p>
+
   
       </div>
 
