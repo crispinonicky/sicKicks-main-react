@@ -22,7 +22,7 @@
 .move-this {
   background-image: url('./images/cheering-crowd-event-17598.jpg');
   background-size: cover;
-  height:  600px;
+  height:  85vh;
   overflow: hidden;
   }
 
@@ -78,13 +78,7 @@ body {
 
 .another-class {
 display: flex;
-/* float: right; */
-/* margin: 20px; */
 background-color: rgba(0, 0, 0, 0.6);
-/* margin: 0px; */
-/* padding: 0px; */
-/* padding-left: 800px; */
-/* padding-top: 50px; */
 color: white;
 }
 
@@ -117,7 +111,11 @@ li {
   /* margin: 100px; */
   /* background-color: gray; */
   border: 1px solid black;
-background-color: gray;
+  background-color: gray;
+  height: 8vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: 33vh;
   /* border-radius: 50%; */
   /* display: flex; */
   /* justify-content: space-between; */

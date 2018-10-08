@@ -15,6 +15,10 @@ import Fields from './components/Fields'
 import Teams from './components/Teams'
 import JustForImage from './components/JustForImage'
 
+import '../node_modules/bootstrap/dist/css/bootstrap.css'; 
+// I think we should use this, since bootstrap will help pretty things
+// up toward the end.
+
 
 class App extends Component {
   constructor(props){
