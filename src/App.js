@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ProjectList from './components/ProjectList';
-import ProjectDetails from './components/ProjectDetails';
+import FieldDetails from './components/FieldDetails';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Login from './components/Login';
@@ -80,6 +80,8 @@ class App extends Component {
           <Route exact path="/lobby" component={Lobby} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/teams" component={Teams} />
+          <Route exact path="/fields/:id" component={FieldDetails} />
+
 
         <Signup/>
         </Switch>
