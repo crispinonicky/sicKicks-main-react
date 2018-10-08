@@ -35,10 +35,11 @@ class AddField extends Component {
 
   render(){
     return(
-      <div>
+      <div className = "add-field">
         <form onSubmit={this.handleFormSubmit}>
           <label>Teams Playing:</label>
           <input type="text" name="teamsPlaying" value={this.state.teamsPlaying} onChange={ e => this.handleChange(e)}/>
+          
           <input type="submit" value="Submit" />
         </form>
       </div>

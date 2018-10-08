@@ -7,13 +7,17 @@ import Lobby from './Lobby'
 class Navbar extends Component {
   constructor(props){
     super(props);
-    this.state = { loggedInUser: null };
+    this.state = { 
+      loggedInUser: null
+         };
     this.service = new AuthService();
 
   }
   
   componentWillReceiveProps(nextProps) {
-    this.setState({ loggedInUser: nextProps["userInSession"]})
+    this.setState({ 
+      loggedInUser: nextProps["userInSession"]  
+  })
   }
 
 
