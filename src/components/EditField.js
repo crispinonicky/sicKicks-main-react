@@ -34,11 +34,11 @@ class EditField extends Component {
     })
   }
 
-  // handleChangeDesc = (event) => {  
-  //   this.setState({
-  //     description:event.target.value
-  //   })
-  // }
+  handleChangeFieldName = (event) => {  
+    this.setState({
+      description:event.target.value
+    })
+  }
 
   render(){
     return (
@@ -46,12 +46,12 @@ class EditField extends Component {
         <hr />
         <h3>Edit form</h3>
         <form onSubmit={this.handleFormSubmit}>
-          <label>Title:</label>
+          <label>Teams Playing:</label>
           <input type="text" name="teamsPlaying" value={this.state.teamsPlaying} onChange={e => this.handleChangeTeamsPlaying(e)}/>
-          {/* <label>Description:</label>
-          <textarea name="description" value={this.state.description} onChange={e => this.handleChangeDesc(e)} /> */}
-          
+          <label>Field Name:</label>
+          <input type="text" name="fieldName" value={this.state.fieldName} onChange={e => this.handleChangeFieldName(e)}/>
           <input type="submit" value="Submit" />
+          <hr/>
         </form>
       </div>
     )

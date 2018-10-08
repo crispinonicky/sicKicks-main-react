@@ -37,6 +37,8 @@ class Fields extends Component {
                 <Link to={`/fields/${field._id}`}>
                   <h3>{field.fieldName} ({field.teamsPlaying})</h3>
                 </Link>
+                <hr/>
+
               </div>
             )})
           }

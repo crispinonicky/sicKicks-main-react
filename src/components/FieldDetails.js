@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import EditField from './EditField';
+
 
 
 class FieldDetails extends Component {
@@ -33,7 +35,7 @@ class FieldDetails extends Component {
         //                                                    {...props} => so we can have 'this.props.history' in Edit.js
         //                                                                                          ^
         //                                                                                          |
-        // return <EditProject theField={this.state} getTheProject={this.getSingleField} {...this.props} />
+        return <EditField theField={this.state} getTheField={this.getSingleField} {...this.props} />
         }
     }
 
