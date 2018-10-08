@@ -74,7 +74,7 @@ class App extends Component {
         <Route exact path="/" component={JustForImage}/>
 
 
-     
+      
    
       <div>
       <Switch>

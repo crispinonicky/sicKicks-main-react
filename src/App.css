@@ -37,7 +37,6 @@
   padding-top: 50px;
 }
 
-
 .for-signup {
   background-color: rgba(64 , 224, 208, 0.09);
   width: 45vw;
@@ -189,4 +188,11 @@ color: white;
   width: 820px;
   } 
     */
+
+    .the-logo-image {
+      background-image: url('./images/thelogo.png');
+      height: 100px;
+      width:  250px;
+      background-size: cover;
+}
 

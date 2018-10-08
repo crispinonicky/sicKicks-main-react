@@ -1,4 +1,4 @@
-/* 
+/* /* 
 
 body {
 
@@ -33,7 +33,7 @@ li {
   /* background-color: black;   */
   /* padding-top: 100px; */
   /* width: 600px; */
-  height: 539px;
+  /* height: 539px;
   position: absolute;
   bottom: 100px;
   left: 850px;
@@ -91,20 +91,20 @@ a {
 
   background-size: cover;
 }
+ */
 
-
-.the-signup-thing {
+/* .the-signup-thing { */
 
 /* position: absolute; */
-bottom:150px;
+/* bottom:150px;
 right: 0px;
 
 background-color: rgba(0, 0, 0, 0.6);
 color: white;
-}
+} */
 
 
-.the-logo-image {
+/* .the-logo-image {
   background-image: url('./images/thelogo.png');
   height: 100px;
   width:  250px;

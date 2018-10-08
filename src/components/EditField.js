@@ -6,19 +6,19 @@ class EditField extends Component {
     super(props);
     this.state = {
         teamsPlaying: this.props.theField.teamsPlaying, 
-        // description: this.props.theField.description
+        fieldName: this.props.theField.fieldName
     }
   }
 
     
   handleFormSubmit = (event) => {
     const teamsPlaying = this.state.teamsPlaying;
-    // const description = this.state.description;
+    const fieldName = this.state.fieldName;
 
     event.preventDefault();
 
     axios.put(`http://localhost:5000/api/fields/${this.props.theField._id}`, { teamsPlaying
-    // , description 
+    , fieldName 
   })
     .then( () => {
         this.props.getTheField();
@@ -36,7 +36,7 @@ class EditField extends Component {
 
   handleChangeFieldName = (event) => {  
     this.setState({
-      description:event.target.value
+      fieldName:event.target.value
     })
   }
 
