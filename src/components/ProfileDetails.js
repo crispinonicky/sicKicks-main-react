@@ -12,7 +12,7 @@ class ProfileDetails {
 
 
   signup = (username, password) => {
-    return this.service.post('/signup', {username, password})
+    return this.service.post('/signup', {username, password, firstName, lastName, email})
     .then(response => response.data)
   }
 

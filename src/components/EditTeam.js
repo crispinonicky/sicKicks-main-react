@@ -21,7 +21,7 @@ class EditTeam extends Component {
     , league 
   })
     .then( () => {
-        this.props.getTheField();
+        // this.props.getTheField();
         // after submitting the form, redirect to '/teams'
         this.props.history.push('/teams');    
     })

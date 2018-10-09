@@ -86,7 +86,11 @@ class App extends Component {
       <div>
       <Switch>
         <Route exact path="/fields" component={Fields} />
-          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/profile" 
+          render={() => 
+          <Profile  {...this.props} 
+          userInSession={this.state.loggedInUser}/>}
+          />
           <Route exact path="/lobby" component={Lobby} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/teams" component={Teams} />
