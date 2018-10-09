@@ -13,7 +13,7 @@ class AddProject extends Component {
     // const {title, description} = this.state;
     const title = this.state.title;
     const description = this.state.description;
-    axios.post(process.env.BASE_URL + "/projects", {title, description })
+    axios.post(process.env.REACT_APP_BASE_URL + "/projects", {title, description })
     .then( () => {
         this.props.getData();
         this.setState({title: "", description: ""});

@@ -19,7 +19,7 @@ class EditTeam extends Component {
 
     event.preventDefault();
 
-    axios.put(process.env.BASE_URL + `/teams/${this.props.theTeam._id}`, { teamName
+    axios.put(process.env.REACT_APP_BASE_URL + `/teams/${this.props.theTeam._id}`, { teamName
     , league, details
   })
     .then( () => {

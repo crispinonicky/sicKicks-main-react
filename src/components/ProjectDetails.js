@@ -16,7 +16,7 @@ class ProjectDetails extends Component {
 
   getSingleProject = () => {
       const { params } = this.props.match;
-      axios.get(process.env.BASE_URL + `/projects/${params.id}`)
+      axios.get(process.env.REACT_APP_BASE_URL + `/projects/${params.id}`)
       .then( responseFromApi =>{
           const theProject = responseFromApi.data;
           this.setState(theProject);
@@ -41,7 +41,7 @@ class ProjectDetails extends Component {
     // DELETE PROJECT:
   deleteProject = () => {
     const { params } = this.props.match;
-    axios.delete(process.env.BASE_URL + `/projects/${params.id}`)
+    axios.delete(process.env.REACT_APP_BASE_URL + `/projects/${params.id}`)
     .then( responseFromApi =>{
         this.props.history.push('/projects'); // !!!         
     })

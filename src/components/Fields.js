@@ -11,7 +11,7 @@ class Fields extends Component {
   }
 
   getAllFields = () =>{
-    axios.get(process.env.BASE_URL + `/fields`)
+    axios.get(process.env.REACT_APP_BASE_URL + `/fields`)
     .then(responseFromApi => {
       this.setState({
         listOfFields: responseFromApi.data
