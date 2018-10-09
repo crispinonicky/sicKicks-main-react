@@ -10,7 +10,7 @@ class Teams extends Component {
   }
 
   getAllTeams = () =>{
-    axios.get(`http://localhost:5000/api/teams`)
+    axios.get(process.env.BASE_URL + `/teams`)
     .then(responseFromApi => {
       this.setState({
         listOfTeams: responseFromApi.data
