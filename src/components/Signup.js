@@ -12,8 +12,6 @@ class Signup extends Component {
       password: "",
       firstName: "",
       lastName: "",
-      playerPosition: "",
-      favoriteClub: "",
       email: ""
     };
     this.service = new AuthService();
@@ -25,8 +23,6 @@ class Signup extends Component {
     const password = this.state.password;
     const firstName = this.state.firstName;
     const lastName = this.state.lastName;
-    const playerPosition = this.state.playerPosition;
-    const favoriteClub = this.state.favoriteClub;
     const email = this.state.email;
 
     this.service
@@ -35,9 +31,7 @@ class Signup extends Component {
         password,
         firstName,
         lastName,
-        playerPosition,
-        favoriteClub,
-        email
+        email,
       )
       .then(theUserObject => {
         this.setState({
@@ -45,8 +39,6 @@ class Signup extends Component {
           password: "",
           firstName: "",
           lastName: "",
-          playerPosition: "",
-          favoriteClub: "",
           email: ""
         });
         this.props.setTheUserInTheAppComponent(theUserObject);

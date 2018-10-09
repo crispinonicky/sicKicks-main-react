@@ -25,6 +25,7 @@ class EditField extends Component {
         // after submitting the form, redirect to '/fields'
         this.props.history.push('/fields');    
     })
+
     .catch( error => console.log(error) )
   }
 

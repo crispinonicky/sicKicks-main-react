@@ -55,7 +55,9 @@
 
 
 .nav-style {
-  background-color: red;
+  background-color: white;
+  color: gray;
+  width: 150px;
 }
 
 .add-team{
@@ -149,9 +151,9 @@ a {
 
 .add-image-here {
   background-image: url('./images/action-backlit-beach-978695.jpg');
-  height: 870px;
+  height: 780px;
   overflow: hidden;
-  /* background-position-y: -150px; */
+  background-position-y: -150px;
   background-size: cover;
   background-repeat: no-repeat;
 }
