@@ -25,7 +25,7 @@ class Signup extends Component {
     const firstName = this.state.firstName;
     const lastName = this.state.lastName;
     const email = this.state.email;
-    const avatar = this.state.avatar;
+    // const avatar = this.state.avatar;
 
     this.service
       .signup(
@@ -34,7 +34,7 @@ class Signup extends Component {
         firstName,
         lastName,
         email,
-        avatar
+        // avatar
       )
       .then(theUserObject => {
         this.setState({
