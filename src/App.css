@@ -57,7 +57,9 @@
 .nav-style {
   background-color: white;
   color: gray;
-  width: 150px;
+  width: 300px;
+  height: 50px;
+
 }
 
 .add-team{
@@ -73,14 +75,11 @@ body {
 }
 
 .another-class {
-/* display: flex; */
-background-color: rgba(0, 0, 0, 0.6);
-color: white;
-/* float: left; */
+background-color: rgba(0, 0, 0, 0.02);
+color: black;
 padding-left: 700px;
 padding-top: 1vh;
 padding-bottom: 1vh;
-/* background-size: cover; */
 }
 
 .whatever {

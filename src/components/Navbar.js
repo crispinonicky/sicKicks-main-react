@@ -41,11 +41,11 @@ class Navbar extends Component {
       
             <li>
               <Link to='/lobby' style={{ textDecoration: 'none' }}>Lobby</Link>
-
-              </li>
-            <li>
               <button onClick={()=>this.logout()}>Logout</button>
-            </li>
+              </li>
+            {/* <li> */}
+              {/* <button onClick={()=>this.logout()}>Logout</button> */}
+            {/* </li> */}
           </ul>
         </nav>
       )
