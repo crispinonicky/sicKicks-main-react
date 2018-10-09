@@ -43,6 +43,9 @@
   float: right;
   height: 539px;
   /* position: fixed; */
+  position: absolute;
+  bottom: 100px;
+  left: 800px;
 }
 
 /* .sign-up-box{
@@ -58,7 +61,8 @@
 
 
 .nav-style {
-  background-color: red;
+  /* background-color: red; */
+  /* color: black; */
 }
 
 .add-team{
@@ -85,7 +89,7 @@ background-color: rgba(0, 0, 0, 0.6);
 /* padding: 0px; */
 /* padding-left: 800px; */
 /* padding-top: 50px; */
-color: white;
+color: black;
 }
 
 
