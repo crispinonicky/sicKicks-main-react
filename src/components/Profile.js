@@ -22,7 +22,7 @@ class Profile extends Component {
      
         <div className="profile">
 
-<h1>Welcome to Profile, Create a free account!</h1>
+<h1>Welcome to your Profile</h1>
 
 <h2>Name and location:</h2>
 
@@ -43,7 +43,7 @@ They can also use this to put their skills.
 
 
 
-<iframe className="the-video" width="860" height="615" src="https://www.youtube.com/embed/tZSIQ_68VFE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe className="the-video" width="1000" height="615" src="https://www.youtube.com/embed/tZSIQ_68VFE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
         </div>

@@ -29,7 +29,7 @@ class Fields extends Component {
   render(){
     return(
       <div>
-        <h1>See what field is available!</h1>
+        <h1>See what fields are available!</h1>
         <div style={{width: '60%', float:"left"}}>
           { this.state.listOfFields.map((field, index) => {
             return (

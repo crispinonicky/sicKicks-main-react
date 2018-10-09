@@ -71,7 +71,10 @@ class App extends Component {
           <Navbar {...this.props} 
           setTheUserInTheAppComponent={this.logMeIn} 
           userInSession={this.state.loggedInUser} />
-          <Route className="for-both" exact path="/" render={() => <Login {...this.props} setTheUserInTheAppComponent={this.logMeIn}/> }/>
+          <Route className="for-both" exact path="/" 
+          render={() => <Login {...this.props} 
+          setTheUserInTheAppComponent={this.logMeIn}/> 
+          }/>
           </div>
 
           
@@ -91,8 +94,10 @@ class App extends Component {
           <Route exact path="/teams/:id" component={TeamDetails} />
 
 
-
+<div className = "sign-up-box">
         <Signup/>
+        </div>
+        
         </Switch>
       </div>
 
