@@ -17,7 +17,7 @@ class EditField extends Component {
 
     event.preventDefault();
 
-    axios.put(process.env.BASE_URL + `/fields/${this.props.theField._id}`, { teamsPlaying
+    axios.put(process.env.REACT_APP_BASE_URL + `/fields/${this.props.theField._id}`, { teamsPlaying
     , fieldName 
   })
     .then( () => {

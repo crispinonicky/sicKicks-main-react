@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AuthService from "./auth/auth-service";
-import { Link } from "react-router-dom";
-import { Redirect } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 import "../App.css";
 
 class Signup extends Component {
@@ -25,7 +25,7 @@ class Signup extends Component {
     const firstName = this.state.firstName;
     const lastName = this.state.lastName;
     const email = this.state.email;
-    const avatar = this.state.avatar;
+    // const avatar = this.state.avatar;
 
     this.service
       .signup(
@@ -34,7 +34,7 @@ class Signup extends Component {
         firstName,
         lastName,
         email,
-        avatar
+        // avatar
       )
       .then(theUserObject => {
         this.setState({
@@ -113,7 +113,7 @@ class Signup extends Component {
             <br />
             
 
-            <input className="the-inputs" type="submit" value="Signup" />
+            <button className="the-inputs" type="submit" > Sign Up </button>
           </form>
         </div>
       </div>

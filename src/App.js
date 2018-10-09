@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ProjectList from './components/ProjectList';
+// import ProjectList from './components/ProjectList';
 import TeamDetails from './components/TeamDetails';
 import FieldDetails from './components/FieldDetails';
 import Navbar from './components/Navbar';
@@ -8,7 +8,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import AuthService from './components/auth/auth-service';
 import Lobby from './components/Lobby';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Profile from './components/Profile'
 import Fields from './components/Fields'

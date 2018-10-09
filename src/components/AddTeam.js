@@ -16,8 +16,7 @@ class AddTeam extends Component {
     const teamName = this.state.teamName;
     const league = this.state.league;
     const details = this.state.details;
-    // axios.post("http://localhost:5000/api/teams", {teamName, league, details })
-    axios.post(process.env.BASE_URL + "/teams", {teamName, league, details })
+    axios.post(process.env.REACT_APP_BASE_URL + "/teams", {teamName, league, details })
     .then( () => {
         this.props.getData();
         this.setState({teamName: "", league: "", details: ""});
