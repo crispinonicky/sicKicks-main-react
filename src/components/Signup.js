@@ -62,7 +62,7 @@ class Signup extends Component {
   render() {
     return (
       <div className="sign-up-box">
-        <div className="for-signup move-the-form">
+        <div className="for-signup move-the-form signup-box-class">
           <form onSubmit={this.handleFormSubmit}>
             <h1 id="for-h1">Join and become a pro!</h1>
             <br />
