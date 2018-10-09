@@ -38,12 +38,13 @@
   background-color: rgba(0, 0, 0, 0.4);
   width: 45vw;
   height: 52vh;
-  position: relative;
+  /* position: relative; */
   right: 9vw;
   top: 8vh;
   padding-right: 4vw;
   /* text-align: center; */
   color: white;
+  background-size: cover;
 }
 
 
@@ -51,9 +52,7 @@
   height: 90vh;
 }
 
-.profile {
-  
-}
+
 
 .nav-style {
   background-color: red;
@@ -72,9 +71,14 @@ body {
 }
 
 .another-class {
-display: flex;
+/* display: flex; */
 background-color: rgba(0, 0, 0, 0.6);
 color: white;
+/* float: left; */
+padding-left: 700px;
+padding-top: 1vh;
+padding-bottom: 1vh;
+/* background-size: cover; */
 }
 
 .whatever {
@@ -87,14 +91,12 @@ li {
   list-style-type: none;
 }
 
-#for-h1 {
 
-}
 
 .move-the-form {
   padding-left: 10vw;
-  padding-top: 3vh;
-  padding-bottom: 4vh;
+  /* padding-top: 3vh; */
+  /* padding-bottom: 4vh; */
   position: absolute;
 }
 
@@ -147,9 +149,9 @@ a {
 
 .add-image-here {
   background-image: url('./images/action-backlit-beach-978695.jpg');
-  height: 1030px;
+  height: 870px;
   overflow: hidden;
-  background-position-y: -150px;
+  /* background-position-y: -150px; */
   background-size: cover;
   background-repeat: no-repeat;
 }
