@@ -12,7 +12,8 @@ class Signup extends Component {
       password: "",
       firstName: "",
       lastName: "",
-      email: ""
+      email: "",
+      avatar: ""
     };
     this.service = new AuthService();
   }
@@ -24,6 +25,7 @@ class Signup extends Component {
     const firstName = this.state.firstName;
     const lastName = this.state.lastName;
     const email = this.state.email;
+    const avatar = this.state.avatar;
 
     this.service
       .signup(
@@ -32,6 +34,7 @@ class Signup extends Component {
         firstName,
         lastName,
         email,
+        avatar
       )
       .then(theUserObject => {
         this.setState({
@@ -39,7 +42,8 @@ class Signup extends Component {
           password: "",
           firstName: "",
           lastName: "",
-          email: ""
+          email: "",
+          avatar: ""
         });
         this.props.setTheUserInTheAppComponent(theUserObject);
       })
@@ -98,14 +102,6 @@ class Signup extends Component {
             <br />
             <br />
 
-            {/* <label>Favorite Club</label>
-          <input className="the-inputs" name="favoriteClub" value={this.state.favoriteClub} onChange={ e => this.handleChange(e)}/>
-          <br/><br/>
-
-          <label>Player position</label>
-          <input className="the-inputs" name="playerPosition" value={this.state.playerPosition} onChange={ e => this.handleChange(e)}/>
-          <br/><br/> */}
-
             <label>Email</label>
             <input
               className="the-inputs"
@@ -115,6 +111,7 @@ class Signup extends Component {
             />
             <br />
             <br />
+            
 
             <input className="the-inputs" type="submit" value="Signup" />
           </form>

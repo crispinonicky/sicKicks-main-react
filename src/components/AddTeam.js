@@ -7,7 +7,7 @@ import axios from 'axios';
 class AddTeam extends Component {
   constructor(props){
       super(props);
-      this.state = { teamName: "", league: "" };
+      this.state = { teamName: "", league: "" , details: ""};
   }
    
   handleFormSubmit = (event) => {
@@ -15,10 +15,11 @@ class AddTeam extends Component {
     // const {teamName, league} = this.state;
     const teamName = this.state.teamName;
     const league = this.state.league;
-    axios.post("http://localhost:5000/api/teams", {teamName, league })
+    const details = this.state.details;
+    axios.post("http://localhost:5000/api/teams", {teamName, league, details })
     .then( () => {
         this.props.getData();
-        this.setState({teamName: "", league: ""});
+        this.setState({teamName: "", league: "", details: ""});
     })
     .catch( error => console.log(error) )
   }
@@ -43,6 +44,11 @@ class AddTeam extends Component {
           <label>League:</label>
           <input type="text" name="league" value={this.state.league} onChange={ e => this.handleChange(e)}/> 
           <br/>          <br/>
+          <label>Details:</label>
+          <br/>
+          <textarea name="details" value={this.state.details} onChange={ e => this.handleChange(e)} />
+          <br/>          <br/>
+
                               <input type="submit" value="Submit" />
 
         </form>

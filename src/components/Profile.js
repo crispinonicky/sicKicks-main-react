@@ -56,22 +56,22 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import AuthService from './auth/auth-service';
-
+// import EditPorfile from './components/EditPorfile'
 
 
 class Profile extends Component {
   constructor(props){
     super(props);
     this.state = { 
-      loggedInUser: null
+      loggedInUser: this.props.userInSession
          };
     this.service = new AuthService();
 
   }
 
   
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps)
+componentWillReceiveProps(nextProps) {
+    console.log('1234567890987654321`12345678909876543',nextProps)
     this.setState({ 
       loggedInUser: nextProps["userInSession"]  
   })
@@ -79,12 +79,12 @@ class Profile extends Component {
 
     
   render(){
+    console.log('!!!!!!!==========' , this.state.loggedInUser)
     if(this.state.loggedInUser){
-      // console.log('!!!!!!!==========' , this.state.loggedInUser)
       console.log(this.state.loggedInUser.username)
       return(
             <div>
-            
+            <img src={this.state.loggedInUser.avatar} width= "100px"/>
             <h1>{this.state.loggedInUser.username}'s Profile</h1>
             <br/>
             <h1>Name: {this.state.loggedInUser.firstName} {this.state.loggedInUser.lastName}</h1>
@@ -93,7 +93,7 @@ class Profile extends Component {
 
             {/* <p>{this.state.loggedInUser.password}</p> */}
 
-
+      {/* <EditPorfile /> */}
             </div>
              
 
@@ -101,8 +101,7 @@ class Profile extends Component {
     } else {
       return (
         <div>
-          Error 404
-        </div>
+Refresh if you're getting this message so you can view your profile. Sorry!        </div>
       )
     }
     }
