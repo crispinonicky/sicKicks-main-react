@@ -11,7 +11,7 @@ class Fields extends Component {
   }
 
   getAllFields = () =>{
-    axios.get(`http://localhost:5000/api/fields`)
+    axios.get(process.env.BASE_URL + `/fields`)
     .then(responseFromApi => {
       this.setState({
         listOfFields: responseFromApi.data
