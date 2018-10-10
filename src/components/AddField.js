@@ -18,7 +18,7 @@ class AddField extends Component {
     // const {teamsPlaying} = this.state;
     const fieldName = this.state.fieldName;
     const teamsPlaying = this.state.teamsPlaying;
-    axios.post(process.env.BASE_URL + "/fields", {fieldName, teamsPlaying})
+    axios.post(process.env.REACT_APP_BASE_URL + "/fields", {fieldName, teamsPlaying})
     .then( () => {
         this.props.getData();
         this.setState({fieldName: "", TeamsPlaying: []});

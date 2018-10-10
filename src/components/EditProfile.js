@@ -59,8 +59,8 @@
 
 import React, { Component } from "react";
 import AuthService from "./auth/auth-service";
-import { Link } from "react-router-dom";
-import { Redirect } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 import "../App.css";
 
 class EditProfile extends Component {

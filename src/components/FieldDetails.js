@@ -18,7 +18,7 @@ class FieldDetails extends Component {
 
   getSingleField = () => {
       const { params } = this.props.match;
-      axios.get(process.env.BASE_URL + `/fields/${params.id}`)
+      axios.get(process.env.REACT_APP_BASE_URL + `/fields/${params.id}`)
       .then( responseFromApi =>{
           const theField = responseFromApi.data;
           this.setState(theField);
@@ -43,7 +43,7 @@ class FieldDetails extends Component {
     // DELETE PROJECT:
   deleteField = () => {
     const { params } = this.props.match;
-    axios.delete(process.env.BASE_URL + `/fields/${params.id}`)
+    axios.delete(process.env.REACT_APP_BASE_URL + `/fields/${params.id}`)
     .then( responseFromApi =>{
         this.props.history.push('/fields'); // !!!         
     })

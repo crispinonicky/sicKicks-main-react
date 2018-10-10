@@ -54,7 +54,7 @@
 //   export default Profile;
 
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import AuthService from './auth/auth-service';
 // import EditPorfile from './components/EditPorfile'
 
