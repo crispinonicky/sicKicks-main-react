@@ -18,7 +18,7 @@ class TeamDetails extends Component {
 
   getSingleTeam = () => {
       const { params } = this.props.match;
-      axios.get(`http://localhost:5000/api/teams/${params.id}`)
+      axios.get(process.env.BASE_URL + `/teams/${params.id}`)
       .then( responseFromApi =>{
           const theTeam = responseFromApi.data;
           this.setState(theTeam);
@@ -43,7 +43,7 @@ class TeamDetails extends Component {
     // DELETE PROJECT:
   deleteTeam = () => {
     const { params } = this.props.match;
-    axios.delete(`http://localhost:5000/api/teams/${params.id}`)
+    axios.delete(process.env.BASE_URL + `/teams/${params.id}`)
     .then( responseFromApi =>{
         this.props.history.push('/teams'); // !!!         
     })
@@ -59,6 +59,7 @@ class TeamDetails extends Component {
       <div>
         <h1>{this.state.teamName}</h1>
         <p>{this.state.league}</p>
+        <p>{this.state.details}</p>
         <button onClick={() => this.deleteTeam()}>Delete team</button>
 
         {this.renderEditForm()}

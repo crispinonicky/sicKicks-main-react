@@ -15,6 +15,10 @@ import Fields from './components/Fields'
 import Teams from './components/Teams'
 import JustForImage from './components/JustForImage'
 
+// import '../node_modules/bootstrap/dist/css/bootstrap.css'; 
+// I think we should use this, since bootstrap will help pretty things
+// up toward the end.
+
 
 class App extends Component {
   constructor(props){
@@ -67,7 +71,10 @@ class App extends Component {
           <Navbar {...this.props} 
           setTheUserInTheAppComponent={this.logMeIn} 
           userInSession={this.state.loggedInUser} />
-          <Route className="for-both" exact path="/" render={() => <Login {...this.props} setTheUserInTheAppComponent={this.logMeIn}/> }/>
+          <Route className="for-both" exact path="/" 
+          render={() => <Login {...this.props} 
+          setTheUserInTheAppComponent={this.logMeIn}/> 
+          }/>
           </div>
 
           
@@ -79,7 +86,11 @@ class App extends Component {
       <div>
       <Switch>
         <Route exact path="/fields" component={Fields} />
-          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/profile" 
+          render={() => 
+          <Profile  {...this.props} 
+          userInSession={this.state.loggedInUser}/>}
+          />
           <Route exact path="/lobby" component={Lobby} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/teams" component={Teams} />
@@ -87,8 +98,10 @@ class App extends Component {
           <Route exact path="/teams/:id" component={TeamDetails} />
 
 
-
+<div className = "sign-up-box">
         <Signup/>
+        </div>
+        
         </Switch>
       </div>
 

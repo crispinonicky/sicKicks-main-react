@@ -11,7 +11,7 @@ class Fields extends Component {
   }
 
   getAllFields = () =>{
-    axios.get(`http://localhost:5000/api/fields`)
+    axios.get(process.env.BASE_URL + `/fields`)
     .then(responseFromApi => {
       this.setState({
         listOfFields: responseFromApi.data
@@ -29,7 +29,7 @@ class Fields extends Component {
   render(){
     return(
       <div>
-        <h1>See what field is available!</h1>
+        <h1>See what fields are available!</h1>
         <div style={{width: '60%', float:"left"}}>
           { this.state.listOfFields.map((field, index) => {
             return (

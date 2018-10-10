@@ -4,7 +4,7 @@ import axios from 'axios';
 class ProfileDetails {
   constructor() {;
     let service = axios.create({
-      baseURL: 'http://localhost:5000/api',
+      baseURL: process.env.BASE_URL,
       withCredentials: true,
     });
     this.service = service;
@@ -12,7 +12,7 @@ class ProfileDetails {
 
 
   signup = (username, password) => {
-    return this.service.post('/signup', {username, password})
+    return this.service.post('/signup', {username, password, firstName, lastName, email})
     .then(response => response.data)
   }
 

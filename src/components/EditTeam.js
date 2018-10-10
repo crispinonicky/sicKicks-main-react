@@ -6,7 +6,8 @@ class EditTeam extends Component {
     super(props);
     this.state = {
         teamName: this.props.theTeam.teamName, 
-        league: this.props.theTeam.league
+        league: this.props.theTeam.league,
+        details: this.props.theTeam.details
     }
   }
 
@@ -14,14 +15,15 @@ class EditTeam extends Component {
   handleFormSubmit = (event) => {
     const teamName = this.state.teamName;
     const league = this.state.league;
+    const details = this.state.details;
 
     event.preventDefault();
 
-    axios.put(`http://localhost:5000/api/teams/${this.props.theTeam._id}`, { teamName
-    , league 
+    axios.put(process.env.BASE_URL + `/teams/${this.props.theTeam._id}`, { teamName
+    , league, details
   })
     .then( () => {
-        this.props.getTheField();
+        // this.props.getTheField();
         // after submitting the form, redirect to '/teams'
         this.props.history.push('/teams');    
     })
@@ -40,6 +42,12 @@ class EditTeam extends Component {
     })
   }
 
+  handleChangeDetails = (event) => {  
+    this.setState({
+      details:event.target.value
+    })
+  }
+
   render(){
     return (
       <div>
@@ -51,6 +59,10 @@ class EditTeam extends Component {
           <label>League:</label>
           <input type="text" name="league" value={this.state.league} onChange={e => this.handleChangeLeague(e)}/>
           <input type="submit" value="Submit" />
+          {/* <label>Details:</label>
+          <br/>
+          <textarea name="details" value={this.state.details} onChange={ e => this.handleChange(e)} /> */}
+
           <hr/>
         </form>
       </div>
