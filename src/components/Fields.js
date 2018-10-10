@@ -28,7 +28,7 @@ class Fields extends Component {
 
   render(){
     return(
-      <div>
+      <div className="fields-background">
         <h1>See what fields are available!</h1>
         <div style={{width: '60%', float:"left"}}>
           { this.state.listOfFields.map((field, index) => {

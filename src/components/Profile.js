@@ -83,7 +83,7 @@ componentWillReceiveProps(nextProps) {
     if(this.state.loggedInUser){
       console.log(this.state.loggedInUser.username)
       return(
-            <div>
+            <div className="change-the-color">
               <div className="moving-the-top">
             <img src={this.state.loggedInUser.avatar} width= "100px"/>
             <h1>Name: {this.state.loggedInUser.firstName} {this.state.loggedInUser.lastName}</h1>
@@ -91,7 +91,15 @@ componentWillReceiveProps(nextProps) {
             <h1>{this.state.loggedInUser.username}'s Profile</h1>
             <h1>Email: {this.state.loggedInUser.email} </h1>
 
+
+
+
+
               </div>
+              <div className="background-image-class">
+              
+              </div>
+
 <br/>
 
            <iframe className="the-video" width="1000" height="615" src="https://www.youtube.com/embed/bKOTKHtbM54" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

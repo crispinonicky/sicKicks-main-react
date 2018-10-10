@@ -1,6 +1,7 @@
 .App {
   text-decoration: none;
   margin: 0;
+  /* padding: 0px; */
 }
 
 .App-header {
@@ -36,15 +37,13 @@
 
 .for-signup {
   background-color: rgba(0, 0, 0, 0.4);
-  width: 45vw;
-  height: 52vh;
-  /* position: relative; */
-  right: 9vw;
-  top: 17vh;
-  padding-right: 4vw;
-  /* text-align: center; */
-  color: white;
-  background-size: cover;
+  width: 30vw;
+  float: right;
+  height: 539px;
+  position: fixed;
+  position: absolute;
+  bottom: 100px;
+  left: 800px;
 }
 
 
@@ -55,12 +54,14 @@
 
 
 .nav-style {
-  position: relative;
-  left: 30vw;
+position: relative;
+
+  /* background-color: white; */
   color: gray;
   width: 30vw;
   height: 50px;
-  /* display: inline; */
+/* top: 10px; */
+
 }
 
 .add-team{
@@ -94,11 +95,13 @@ body {
 }
 
 .another-class {
-background-color: rgba(0,0,0,0.1);
+
+background-color: rgba(0, 0, 0, 0.02);
 color: black;
-padding-left: 44vw;
+padding-left: 78vw;
 padding-top: 3vh;
 padding-bottom: 3vh;
+
 }
 
 .whatever {
@@ -241,5 +244,28 @@ div.field-details > a{
 
 
 .background-image-class {
-  /* background-image: url('./images/') */
+  background-image: url('./images/ball-field-grass-114296.jpg');
+  height: 450px;
+  background-size: cover;
+  background-position-y: -64px;
+  width: 891px;
+  position: absolute;
+  bottom: 305px;
+  left: 550px;
+}
+
+
+.fields-background {
+  background-image: url('./images/action-aerial-athletes-1171084.jpg');
+  height: 760px;
+  background-size: cover;
+  /* position: fixed; */
+  /* position: absolute; */
+
+}
+
+
+
+.change-the-color {
+  background-color: white;
 }
