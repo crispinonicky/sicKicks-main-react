@@ -58,8 +58,6 @@ class App extends Component {
   }
 
 
-
-
   render() {
     console.log(this.state)
     this.fetchUser();
@@ -83,7 +81,7 @@ class App extends Component {
 
       
    
-      <div>
+      <div className="the-input-boxes">
       <Switch>
         <Route exact path="/fields" component={Fields} />
           <Route exact path="/profile" 
@@ -112,4 +110,3 @@ class App extends Component {
 }
 
 export default App;
-

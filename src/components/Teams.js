@@ -28,6 +28,8 @@ class Teams extends Component {
   render(){
     return(
       <div>
+                <h1>See what teams have signed up!</h1>
+
         <div style={{width: '60%', float:"left"}}>
           { this.state.listOfTeams.map((team, index) => {
             return (

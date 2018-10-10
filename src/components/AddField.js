@@ -7,7 +7,8 @@ class AddField extends Component {
       super(props);
       this.state = { 
         fieldName: "",
-        teamsPlaying: [], 
+        teamsPlaying: [],
+        details: "" 
 
 
        };
@@ -18,10 +19,11 @@ class AddField extends Component {
     // const {teamsPlaying} = this.state;
     const fieldName = this.state.fieldName;
     const teamsPlaying = this.state.teamsPlaying;
-    axios.post(process.env.REACT_APP_BASE_URL + "/fields", {fieldName, teamsPlaying})
+    const details = this.state.details;
+    axios.post(process.env.REACT_APP_BASE_URL + "/fields", {fieldName, teamsPlaying, details})
     .then( () => {
         this.props.getData();
-        this.setState({fieldName: "", TeamsPlaying: []});
+        this.setState({fieldName: "", TeamsPlaying: [], details: ""});
     })
     .catch( error => console.log(error) )
   }
@@ -41,10 +43,14 @@ class AddField extends Component {
         <form onSubmit={this.handleFormSubmit}>
           <label>Field Name:</label>
           <input type="text" name="fieldName" value={this.state.fieldName} onChange={ e => this.handleChange(e)}/>
-         <br/>
+          <br/>          <br/>
           <label>Teams Playing:</label>
           <input type="text" name="teamsPlaying" value={this.state.teamsPlaying} onChange={ e => this.handleChange(e)}/>
-
+          <br/>         <br/>
+          <label>Details:</label>
+{/* <br/> */}
+          <textarea name="details" value={this.state.details} onChange={ e => this.handleChange(e)} />
+          <br/>          <br/>
           <input type="submit" value="Submit" />
         </form>
       </div>

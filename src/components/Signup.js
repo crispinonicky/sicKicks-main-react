@@ -37,6 +37,7 @@ class Signup extends Component {
         // avatar
       )
       .then(theUserObject => {
+        console.log('123456789012345678901234567890', theUserObject, process.env.REACT_APP_BASE_URL)
         this.setState({
           username: "",
           password: "",
@@ -76,6 +77,7 @@ class Signup extends Component {
             <label>Password</label>
             <input
               className="the-inputs"
+              type = "password"
               name="password"
               value={this.state.password}
               onChange={e => this.handleChange(e)}

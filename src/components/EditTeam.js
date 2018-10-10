@@ -58,10 +58,12 @@ class EditTeam extends Component {
           <input type="text" name="teamName" value={this.state.teamName} onChange={e => this.handleChangeTeamName(e)}/>
           <label>League:</label>
           <input type="text" name="league" value={this.state.league} onChange={e => this.handleChangeLeague(e)}/>
-          <input type="submit" value="Submit" />
-          {/* <label>Details:</label>
           <br/>
-          <textarea name="details" value={this.state.details} onChange={ e => this.handleChange(e)} /> */}
+          <label>Details:</label>
+          <br/>
+          <textarea name="details" value={this.state.details} onChange={ e => this.handleChangeDetails(e)} />
+          <br/>
+          <input type="submit" value="Submit" className="btn btn-success"  />
 
           <hr/>
         </form>
