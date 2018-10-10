@@ -28,12 +28,12 @@ class Fields extends Component {
 
   render(){
     return(
-      <div>
+      <div className="fields-background">
         <h1>See what fields are available!</h1>
         <div style={{width: '60%', float:"left"}}>
           { this.state.listOfFields.map((field, index) => {
             return (
-              <div key={field._id}>
+              <div className="give-a-box" key={field._id}>
                 <Link to={`/fields/${field._id}`}>
                   <h3>{field.fieldName} ({field.teamsPlaying})</h3>
                 </Link>
