@@ -60,7 +60,7 @@ class TeamDetails extends Component {
         <h1>{this.state.teamName}</h1>
         <p>{this.state.league}</p>
         <p>{this.state.details}</p>
-        <button onClick={() => this.deleteTeam()}>Delete team</button>
+        <button class="btn btn-danger" onClick={() => this.deleteTeam()}>Delete team</button>
 
         {this.renderEditForm()}
         

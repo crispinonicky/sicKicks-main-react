@@ -56,10 +56,12 @@ class FieldDetails extends Component {
 
   render(){
     return(
-      <div>
+      <div className="field-details">
         <h1>{this.state.fieldName}</h1>
         <p>{this.state.teamsPlaying}</p>
-        <button onClick={() => this.deleteField()}>Delete field</button>
+        <p>{this.state.details}</p>
+        <button class="btn btn-danger" onClick={() => this.deleteField()}>Delete field</button>
+       
 
         {this.renderEditForm()}
         

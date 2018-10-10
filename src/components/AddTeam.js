@@ -45,11 +45,9 @@ class AddTeam extends Component {
           <input type="text" name="league" value={this.state.league} onChange={ e => this.handleChange(e)}/> 
           <br/>          <br/>
           <label>Details:</label>
-          <br/>
           <textarea name="details" value={this.state.details} onChange={ e => this.handleChange(e)} />
           <br/>          <br/>
-
-                              <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" />
 
         </form>
       </div>

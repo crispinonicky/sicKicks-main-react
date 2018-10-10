@@ -6,7 +6,8 @@ class EditField extends Component {
     super(props);
     this.state = {
         teamsPlaying: this.props.theField.teamsPlaying, 
-        fieldName: this.props.theField.fieldName
+        fieldName: this.props.theField.fieldName,
+        details: this.props.theField.details
     }
   }
 
@@ -14,11 +15,12 @@ class EditField extends Component {
   handleFormSubmit = (event) => {
     const teamsPlaying = this.state.teamsPlaying;
     const fieldName = this.state.fieldName;
+    const details = this.state.details;
 
     event.preventDefault();
 
     axios.put(process.env.REACT_APP_BASE_URL + `/fields/${this.props.theField._id}`, { teamsPlaying
-    , fieldName 
+    , fieldName, details 
   })
     .then( () => {
         this.props.getTheField();
@@ -41,18 +43,34 @@ class EditField extends Component {
     })
   }
 
+  handleChangeDetails = (event) => {  
+    this.setState({
+      details:event.target.value
+    })
+  }
   render(){
     return (
-      <div>
+      <div className="the-input-boxes">
         <hr />
         <h3>Edit form</h3>
         <form onSubmit={this.handleFormSubmit}>
           <label>Teams Playing:</label>
           <input type="text" name="teamsPlaying" value={this.state.teamsPlaying} onChange={e => this.handleChangeTeamsPlaying(e)}/>
+          {/* <br/> */}
           <label>Field Name:</label>
           <input type="text" name="fieldName" value={this.state.fieldName} onChange={e => this.handleChangeFieldName(e)}/>
-          <input type="submit" value="Submit" />
+          <br/>
+          <label>Details:</label>
+          <br/>
+          <textarea name="details" value={this.state.details} onChange={ e => this.handleChangeDetails(e)} />
+          <br/>
+
+          <input type="submit" value="Submit" className="btn btn-success"/>
+
+
+          {/* <button type="submit" value="Submit" type="button" className="btn btn-success">Submit</button> */}
           <hr/>
+
         </form>
       </div>
     )
