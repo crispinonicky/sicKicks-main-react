@@ -17,7 +17,6 @@ class Login extends Component {
   handleFormSubmit = (event) => {
     // axios.post()
     // .then(() => this.setState({ redirect: true }));
-    console.log(this.state.redirect);
     event.preventDefault();
     const username = this.state.username;
     const password = this.state.password;
@@ -48,7 +47,7 @@ class Login extends Component {
           <input type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
           
           <label>Password:</label>
-          <input name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
+          <input type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
           
           <input type="submit" value="Login" />
         </form>
