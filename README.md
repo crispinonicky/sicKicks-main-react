@@ -6,6 +6,8 @@ Tony Dogan (https://github.com/batuhaandogan)
 
 and Inna Yugay (https://github.com/innayugay)
 
+______________________________________________________________________
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
